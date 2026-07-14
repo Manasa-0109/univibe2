@@ -1,5 +1,6 @@
 import type {
   BaseEntity,
+  ImageRef,
   SocialLinks,
   UUID,
 } from "./common";
@@ -16,8 +17,8 @@ export interface User extends BaseEntity {
   email: string;
   displayName: string;
   bio?: string;
-  avatarUrl?: string;
-  bannerUrl?: string;
+  avatar?: ImageRef;
+  banner?: ImageRef;
   role: UserRole;
   communityIds: UUID[];
   teamIds: UUID[];

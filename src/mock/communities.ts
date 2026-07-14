@@ -1,4 +1,13 @@
-import type { Community } from "../types";
+import type { Community, ImageRef } from "../types";
+
+const img = (id: string, seed: string, alt: string, w = 200, h = 200): ImageRef => ({
+  id,
+  src: `https://picsum.photos/id/${seed}/${w}/${h}`,
+  placeholder: `https://picsum.photos/id/${seed}/${w}/${h}`,
+  altText: alt,
+  width: w,
+  height: h,
+});
 
 export const communities: Community[] = [
   {
@@ -7,8 +16,8 @@ export const communities: Community[] = [
     name: "K-Pop Universe",
     description:
       "The ultimate hub for K-Pop fans worldwide. Discuss comebacks, music shows, fan projects, and connect with fellow fans across all groups and generations.",
-    avatarUrl: "https://picsum.photos/id/1011/200/200",
-    bannerUrl: "https://picsum.photos/id/1011/1200/400",
+    avatar: img("ca-1", "1011", "K-Pop Universe avatar"),
+    banner: img("cb-1", "1011", "K-Pop Universe banner", 1200, 400),
     category: "k-pop",
     memberCount: 482_300,
     isVerified: true,
@@ -36,8 +45,8 @@ export const communities: Community[] = [
     name: "K-Drama Central",
     description:
       "From classics to the latest hits — reviews, episode discussions, actor news, and recommendation threads for all Korean drama enthusiasts.",
-    avatarUrl: "https://picsum.photos/id/1012/200/200",
-    bannerUrl: "https://picsum.photos/id/1012/1200/400",
+    avatar: img("ca-2", "1012", "K-Drama Central avatar"),
+    banner: img("cb-2", "1012", "K-Drama Central banner", 1200, 400),
     category: "k-drama",
     memberCount: 318_750,
     isVerified: true,
@@ -63,8 +72,8 @@ export const communities: Community[] = [
     name: "Tollywood Titans",
     description:
       "The home of Telugu cinema fans. From Prabhas to Allu Arjun, RRR to Pushpa — celebrate the best of Tollywood with reviews, trailers, box office, and fan discussions.",
-    avatarUrl: "https://picsum.photos/id/1013/200/200",
-    bannerUrl: "https://picsum.photos/id/1013/1200/400",
+    avatar: img("ca-3", "1013", "Tollywood Titans avatar"),
+    banner: img("cb-3", "1013", "Tollywood Titans banner", 1200, 400),
     category: "tollywood",
     memberCount: 256_900,
     isVerified: true,
@@ -90,8 +99,8 @@ export const communities: Community[] = [
     name: "Bollywood Buzz",
     description:
       "The biggest Bollywood community online. Latest news, movie reviews, celebrity gossip, trailers, and everything happening in Hindi cinema.",
-    avatarUrl: "https://picsum.photos/id/1014/200/200",
-    bannerUrl: "https://picsum.photos/id/1014/1200/400",
+    avatar: img("ca-4", "1014", "Bollywood Buzz avatar"),
+    banner: img("cb-4", "1014", "Bollywood Buzz banner", 1200, 400),
     category: "bollywood",
     memberCount: 524_600,
     isVerified: true,
@@ -118,8 +127,8 @@ export const communities: Community[] = [
     name: "Kollywood Kings",
     description:
       "Dedicated to Tamil cinema. From Rajinikanth to Vijay and Ajith — discuss the legends, new releases, music, and the rich legacy of Kollywood.",
-    avatarUrl: "https://picsum.photos/id/1015/200/200",
-    bannerUrl: "https://picsum.photos/id/1015/1200/400",
+    avatar: img("ca-5", "1015", "Kollywood Kings avatar"),
+    banner: img("cb-5", "1015", "Kollywood Kings banner", 1200, 400),
     category: "kollywood",
     memberCount: 198_400,
     isVerified: true,
@@ -144,8 +153,8 @@ export const communities: Community[] = [
     name: "Mollywood Magic",
     description:
       "Celebrate Malayalam cinema — from Mohanlal and Mammootty to the new wave of Fahadh Faasil and Premam-era filmmaking. Reviews, discussions, and more.",
-    avatarUrl: "https://picsum.photos/id/1016/200/200",
-    bannerUrl: "https://picsum.photos/id/1016/1200/400",
+    avatar: img("ca-6", "1016", "Mollywood Magic avatar"),
+    banner: img("cb-6", "1016", "Mollywood Magic banner", 1200, 400),
     category: "mollywood",
     memberCount: 142_800,
     isVerified: true,
@@ -170,8 +179,8 @@ export const communities: Community[] = [
     name: "Pollywood Pulse",
     description:
       "The vibrant community for Punjabi cinema and music. From Diljit Dosanjh to Ammy Virk — films, music, culture, and the rising Punjabi entertainment scene.",
-    avatarUrl: "https://picsum.photos/id/1017/200/200",
-    bannerUrl: "https://picsum.photos/id/1017/1200/400",
+    avatar: img("ca-7", "1017", "Pollywood Pulse avatar"),
+    banner: img("cb-7", "1017", "Pollywood Pulse banner", 1200, 400),
     category: "pollywood",
     memberCount: 89_500,
     isVerified: false,
@@ -196,8 +205,8 @@ export const communities: Community[] = [
     name: "Indian Music Mafia",
     description:
       "From classical ragas to Bollywood soundtracks, indie to Carnatic — the community for all forms of Indian music. Discover, discuss, and share.",
-    avatarUrl: "https://picsum.photos/id/1018/200/200",
-    bannerUrl: "https://picsum.photos/id/1018/1200/400",
+    avatar: img("ca-8", "1018", "Indian Music Mafia avatar"),
+    banner: img("cb-8", "1018", "Indian Music Mafia banner", 1200, 400),
     category: "indian-music",
     memberCount: 176_200,
     isVerified: true,
@@ -223,8 +232,8 @@ export const communities: Community[] = [
     name: "Indian Sports Arena",
     description:
       "Cricket, football, kabaddi, badminton, wrestling — all Indian sports under one roof. Live discussions, match threads, player stats, and fan debates.",
-    avatarUrl: "https://picsum.photos/id/1019/200/200",
-    bannerUrl: "https://picsum.photos/id/1019/1200/400",
+    avatar: img("ca-9", "1019", "Indian Sports Arena avatar"),
+    banner: img("cb-9", "1019", "Indian Sports Arena banner", 1200, 400),
     category: "indian-sports",
     memberCount: 312_000,
     isVerified: true,
@@ -250,8 +259,8 @@ export const communities: Community[] = [
     name: "Creators Collective",
     description:
       "A dedicated space for digital creators — YouTubers, streamers, writers, designers, and developers. Share work, collaborate, learn, and grow together.",
-    avatarUrl: "https://picsum.photos/id/1020/200/200",
-    bannerUrl: "https://picsum.photos/id/1020/1200/400",
+    avatar: img("ca-10", "1020", "Creators Collective avatar"),
+    banner: img("cb-10", "1020", "Creators Collective banner", 1200, 400),
     category: "creators",
     memberCount: 67_400,
     isVerified: true,

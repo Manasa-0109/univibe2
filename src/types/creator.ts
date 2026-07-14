@@ -1,5 +1,6 @@
 import type {
   BaseEntity,
+  ImageRef,
   SocialLinks,
   UUID,
 } from "./common";
@@ -17,8 +18,8 @@ export type CreatorCategory =
 export interface Creator extends BaseEntity {
   displayName: string;
   bio: string;
-  avatarUrl?: string;
-  bannerUrl?: string;
+  avatar?: ImageRef;
+  banner?: ImageRef;
   category: CreatorCategory;
   communityIds: UUID[];
   teamIds: UUID[];

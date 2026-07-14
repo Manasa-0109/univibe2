@@ -24,18 +24,24 @@ export type Visibility = "public" | "private" | "members-only";
 
 export type EntityStatus = "active" | "inactive" | "archived" | "draft";
 
-export interface MediaImage {
+/**
+ * Structured image reference. The `placeholder` URL is used during
+ * development; swap `src` to a permanent CDN/asset path later without
+ * touching the rest of the data model.
+ */
+export interface ImageRef {
   id: UUID;
-  url: string;
+  src: string;
+  placeholder: string;
   altText?: string;
   width?: number;
   height?: number;
 }
 
 export interface MediaGallery {
-  images: MediaImage[];
-  coverImage?: MediaImage;
-  thumbnail?: MediaImage;
+  images: ImageRef[];
+  coverImage?: ImageRef;
+  thumbnail?: ImageRef;
 }
 
 export interface PaginatedMeta {

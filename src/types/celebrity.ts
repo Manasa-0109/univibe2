@@ -1,4 +1,4 @@
-import type { BaseEntity, SocialLinks } from "./common";
+import type { BaseEntity, ImageRef, SocialLinks } from "./common";
 
 export type CelebrityProfession =
   | "actor"
@@ -16,8 +16,8 @@ export interface Celebrity extends BaseEntity {
   displayName: string;
   realName?: string;
   bio: string;
-  avatarUrl?: string;
-  bannerUrl?: string;
+  avatar?: ImageRef;
+  banner?: ImageRef;
   profession: CelebrityProfession;
   agency?: string;
   followerCount: number;

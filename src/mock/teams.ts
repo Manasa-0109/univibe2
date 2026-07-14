@@ -1,4 +1,13 @@
-import type { Team } from "../types";
+import type { Team, ImageRef } from "../types";
+
+const img = (id: string, seed: string, alt: string, w = 200, h = 200): ImageRef => ({
+  id,
+  src: `https://picsum.photos/id/${seed}/${w}/${h}`,
+  placeholder: `https://picsum.photos/id/${seed}/${w}/${h}`,
+  altText: alt,
+  width: w,
+  height: h,
+});
 
 export const teams: Team[] = [
   {
@@ -7,8 +16,8 @@ export const teams: Team[] = [
     name: "K-Pop Cover Squad",
     description:
       "A dance and vocal cover team dedicated to performing K-Pop choreographies at events and online.",
-    avatarUrl: "https://picsum.photos/id/20/200/200",
-    bannerUrl: "https://picsum.photos/id/20/1200/400",
+    avatar: img("ta-1", "20", "K-Pop Cover Squad avatar"),
+    banner: img("tb-1", "20", "K-Pop Cover Squad banner", 1200, 400),
     communityId: "c1000001-0000-4000-8000-000000000001",
     category: "content",
     memberCount: 12,
@@ -27,8 +36,8 @@ export const teams: Team[] = [
     name: "K-Drama Review Crew",
     description:
       "A team of reviewers who publish weekly episode breakdowns, drama recommendations, and seasonal watch guides.",
-    avatarUrl: "https://picsum.photos/id/21/200/200",
-    bannerUrl: "https://picsum.photos/id/21/1200/400",
+    avatar: img("ta-2", "21", "K-Drama Review Crew avatar"),
+    banner: img("tb-2", "21", "K-Drama Review Crew banner", 1200, 400),
     communityId: "c1000002-0000-4000-8000-000000000002",
     category: "content",
     memberCount: 8,
@@ -46,8 +55,8 @@ export const teams: Team[] = [
     name: "Tollywood VFX Collective",
     description:
       "VFX artists and editors creating fan-made trailers, title sequences, and breakdown videos for Telugu cinema.",
-    avatarUrl: "https://picsum.photos/id/22/200/200",
-    bannerUrl: "https://picsum.photos/id/22/1200/400",
+    avatar: img("ta-3", "22", "Tollywood VFX Collective avatar"),
+    banner: img("tb-3", "22", "Tollywood VFX Collective banner", 1200, 400),
     communityId: "c1000003-0000-4000-8000-000000000003",
     category: "creative",
     memberCount: 6,
@@ -66,8 +75,8 @@ export const teams: Team[] = [
     name: "Bollywood Podcast Gang",
     description:
       "Weekly podcast team covering Bollywood news, film reviews, interviews, and industry analysis.",
-    avatarUrl: "https://picsum.photos/id/23/200/200",
-    bannerUrl: "https://picsum.photos/id/23/1200/400",
+    avatar: img("ta-4", "23", "Bollywood Podcast Gang avatar"),
+    banner: img("tb-4", "23", "Bollywood Podcast Gang banner", 1200, 400),
     communityId: "c1000004-0000-4000-8000-000000000004",
     category: "content",
     memberCount: 5,
@@ -86,8 +95,8 @@ export const teams: Team[] = [
     name: "Kollywood Music Ensemble",
     description:
       "Musicians and producers recreating iconic Ilaiyaraaja and A.R. Rahman scores with live performances and covers.",
-    avatarUrl: "https://picsum.photos/id/24/200/200",
-    bannerUrl: "https://picsum.photos/id/24/1200/400",
+    avatar: img("ta-5", "24", "Kollywood Music Ensemble avatar"),
+    banner: img("tb-5", "24", "Kollywood Music Ensemble banner", 1200, 400),
     communityId: "c1000005-0000-4000-8000-000000000005",
     category: "music",
     memberCount: 10,
@@ -105,8 +114,8 @@ export const teams: Team[] = [
     name: "Mollywood Film Society",
     description:
       "A collective of film students and critics who host screenings, discussions, and analytical essays on Malayalam cinema.",
-    avatarUrl: "https://picsum.photos/id/25/200/200",
-    bannerUrl: "https://picsum.photos/id/25/1200/400",
+    avatar: img("ta-6", "25", "Mollywood Film Society avatar"),
+    banner: img("tb-6", "25", "Mollywood Film Society banner", 1200, 400),
     communityId: "c1000006-0000-4000-8000-000000000006",
     category: "community",
     memberCount: 7,
@@ -124,8 +133,8 @@ export const teams: Team[] = [
     name: "Indian Sports Analytics",
     description:
       "Data analysts and sports enthusiasts producing match previews, player stats, and fantasy cricket insights.",
-    avatarUrl: "https://picsum.photos/id/26/200/200",
-    bannerUrl: "https://picsum.photos/id/26/1200/400",
+    avatar: img("ta-7", "26", "Indian Sports Analytics avatar"),
+    banner: img("tb-7", "26", "Indian Sports Analytics banner", 1200, 400),
     communityId: "c1000009-0000-4000-8000-000000000009",
     category: "content",
     memberCount: 9,
@@ -144,8 +153,8 @@ export const teams: Team[] = [
     name: "Creators Collab Hub",
     description:
       "A team of digital creators collaborating on cross-platform content — podcasts, tutorials, and joint live streams.",
-    avatarUrl: "https://picsum.photos/id/27/200/200",
-    bannerUrl: "https://picsum.photos/id/27/1200/400",
+    avatar: img("ta-8", "27", "Creators Collab Hub avatar"),
+    banner: img("tb-8", "27", "Creators Collab Hub banner", 1200, 400),
     communityId: "c1000010-0000-4000-8000-000000000010",
     category: "content",
     memberCount: 11,

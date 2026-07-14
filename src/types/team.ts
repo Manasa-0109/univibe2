@@ -1,5 +1,6 @@
 import type {
   BaseEntity,
+  ImageRef,
   SocialLinks,
   UUID,
 } from "./common";
@@ -15,8 +16,8 @@ export type TeamCategory =
 export interface Team extends BaseEntity {
   name: string;
   description: string;
-  avatarUrl?: string;
-  bannerUrl?: string;
+  avatar?: ImageRef;
+  banner?: ImageRef;
   communityId: UUID;
   category: TeamCategory;
   memberCount: number;

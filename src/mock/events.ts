@@ -1,4 +1,13 @@
-import type { Event } from "../types";
+import type { Event, ImageRef } from "../types";
+
+const img = (id: string, seed: string, alt: string, w = 1200, h = 400): ImageRef => ({
+  id,
+  src: `https://picsum.photos/id/${seed}/${w}/${h}`,
+  placeholder: `https://picsum.photos/id/${seed}/${w}/${h}`,
+  altText: alt,
+  width: w,
+  height: h,
+});
 
 export const events: Event[] = [
   {
@@ -7,7 +16,7 @@ export const events: Event[] = [
     title: "BTS Fan Meet Mumbai 2025",
     description:
       "The biggest BTS fan gathering in India. Dance covers, trivia, merch stalls, and a screening of BTS concert films. ARMYS unite!",
-    bannerUrl: "https://picsum.photos/id/50/1200/400",
+    banner: img("eb-1", "50", "BTS Fan Meet Mumbai 2025 banner"),
     format: "in-person",
     startTime: "2025-08-15T14:00:00Z",
     endTime: "2025-08-15T18:00:00Z",
@@ -35,7 +44,7 @@ export const events: Event[] = [
     title: "K-Drama Marathon: Seoul Edition",
     description:
       "A 12-hour K-Drama marathon featuring iconic episodes from Crash Landing on You, Goblin, and The Glory. Includes Korean food stalls.",
-    bannerUrl: "https://picsum.photos/id/51/1200/400",
+    banner: img("eb-2", "51", "K-Drama Marathon Seoul banner"),
     format: "hybrid",
     startTime: "2025-09-20T09:00:00Z",
     endTime: "2025-09-20T21:00:00Z",
@@ -61,7 +70,7 @@ export const events: Event[] = [
     title: "Tollywood Night Hyderabad",
     description:
       "An evening celebrating Telugu cinema with live performances, fan Q&A, and a special screening of a classic Tollywood film.",
-    bannerUrl: "https://picsum.photos/id/52/1200/400",
+    banner: img("eb-3", "52", "Tollywood Night Hyderabad banner"),
     format: "in-person",
     startTime: "2025-07-25T18:00:00Z",
     endTime: "2025-07-25T22:30:00Z",
@@ -89,7 +98,7 @@ export const events: Event[] = [
     title: "Bollywood Awards Watch Party 2025",
     description:
       "Live watch party of the biggest Bollywood awards night. Red carpet, predictions, games, and prizes. Dress to impress!",
-    bannerUrl: "https://picsum.photos/id/53/1200/400",
+    banner: img("eb-4", "53", "Bollywood Awards Watch Party banner"),
     format: "in-person",
     startTime: "2025-10-10T18:30:00Z",
     endTime: "2025-10-10T23:30:00Z",
@@ -114,7 +123,7 @@ export const events: Event[] = [
     title: "Kollywood Music Night Chennai",
     description:
       "Live orchestra performing Ilaiyaraaja and A.R. Rahman classics. An evening of Tamil film music nostalgia.",
-    bannerUrl: "https://picsum.photos/id/54/1200/400",
+    banner: img("eb-5", "54", "Kollywood Music Night Chennai banner"),
     format: "in-person",
     startTime: "2025-08-30T19:00:00Z",
     endTime: "2025-08-30T22:00:00Z",
@@ -141,7 +150,7 @@ export const events: Event[] = [
     title: "Mollywood Film Quiz Kochi",
     description:
       "Test your knowledge of Malayalam cinema at the biggest Mollywood quiz competition. Teams of 4. Exciting prizes.",
-    bannerUrl: "https://picsum.photos/id/55/1200/400",
+    banner: img("eb-6", "55", "Mollywood Film Quiz Kochi banner"),
     format: "in-person",
     startTime: "2025-09-05T15:00:00Z",
     endTime: "2025-09-05T18:00:00Z",
@@ -168,7 +177,7 @@ export const events: Event[] = [
     title: "Punjabi Fest Amritsar 2025",
     description:
       "A celebration of Punjabi cinema and music with live performances, food, and cultural showcases. Diljit vibes guaranteed.",
-    bannerUrl: "https://picsum.photos/id/56/1200/400",
+    banner: img("eb-7", "56", "Punjabi Fest Amritsar 2025 banner"),
     format: "in-person",
     startTime: "2025-11-01T11:00:00Z",
     endTime: "2025-11-01T20:00:00Z",
@@ -195,7 +204,7 @@ export const events: Event[] = [
     title: "Indian Music Concert: Fusion Night",
     description:
       "A fusion concert blending Indian classical with electronic and indie. Featuring upcoming artists from across the country.",
-    bannerUrl: "https://picsum.photos/id/57/1200/400",
+    banner: img("eb-8", "57", "Indian Music Concert Bangalore banner"),
     format: "in-person",
     startTime: "2025-07-12T19:30:00Z",
     endTime: "2025-07-12T22:30:00Z",
@@ -222,7 +231,7 @@ export const events: Event[] = [
     title: "IPL Fan Zone: Grand Finale Screening",
     description:
       "The biggest IPL watch party in the city. Giant screens, food trucks, games, and live commentary. Cheer your team!",
-    bannerUrl: "https://picsum.photos/id/58/1200/400",
+    banner: img("eb-9", "58", "IPL Fan Zone Grand Finale banner"),
     format: "in-person",
     startTime: "2025-05-26T18:00:00Z",
     endTime: "2025-05-26T23:30:00Z",
@@ -249,7 +258,7 @@ export const events: Event[] = [
     title: "UniVibe Creator Summit 2025",
     description:
       "A virtual summit for digital creators. Panel discussions, workshops on monetization, SEO, and community building. Network with top creators.",
-    bannerUrl: "https://picsum.photos/id/59/1200/400",
+    banner: img("eb-10", "59", "UniVibe Creator Summit 2025 banner"),
     format: "online",
     startTime: "2025-09-12T09:00:00Z",
     endTime: "2025-09-12T17:00:00Z",

@@ -1,5 +1,6 @@
 import type {
   BaseEntity,
+  ImageRef,
   ISODateString,
   SocialLinks,
   UUID,
@@ -21,8 +22,8 @@ export type CommunityCategory =
 export interface Community extends BaseEntity {
   name: string;
   description: string;
-  avatarUrl?: string;
-  bannerUrl?: string;
+  avatar?: ImageRef;
+  banner?: ImageRef;
   category: CommunityCategory;
   memberCount: number;
   isVerified: boolean;

@@ -1,5 +1,6 @@
 import type {
   BaseEntity,
+  ImageRef,
   ISODateString,
   SocialLinks,
   UUID,
@@ -28,7 +29,7 @@ export interface EventLocation {
 export interface Event extends BaseEntity {
   title: string;
   description: string;
-  bannerUrl?: string;
+  banner?: ImageRef;
   format: EventFormat;
   startTime: ISODateString;
   endTime: ISODateString;

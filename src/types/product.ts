@@ -1,7 +1,7 @@
 import type {
   BaseEntity,
   Currency,
-  MediaImage,
+  ImageRef,
   UUID,
 } from "./common";
 
@@ -19,13 +19,15 @@ export interface Product extends BaseEntity {
   description: string;
   price: number;
   currency: Currency;
-  images: MediaImage[];
+  images: ImageRef[];
   category: ProductCategory;
   inventory: number;
   communityId?: UUID;
   rating: number;
   reviewCount: number;
   isActive: boolean;
+  isFeatured: boolean;
+  featuredOrder?: number;
   sku?: string;
   tags: string[];
 }
